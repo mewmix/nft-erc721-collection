@@ -147,3 +147,4 @@ function replaceInFile(file: string, search: string, replace: string): void
 
   fs.writeFileSync(file, fileContent, 'utf8');
 }
+

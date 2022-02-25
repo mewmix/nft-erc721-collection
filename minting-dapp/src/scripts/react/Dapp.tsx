@@ -256,7 +256,7 @@ export default class Dapp extends React.Component<Props, State> {
 
   private generateEtherscanUrl(): string
   {
-    return `https://${this.state.network?.chainId === 1 || !this.state.network?.name ? 'www' : this.state.network.name}.etherscan.io/address/${CollectionConfig.contractAddress}`;
+    return `https://${this.state.network?.chainId === 1 || !this.state.network?.name ? 'www' : this.state.network.name}.mumbai.polygonscan.com/address/${CollectionConfig.contractAddress}`;
   }
 
   private generateOpenSeaUrl(): string

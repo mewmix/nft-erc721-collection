@@ -119,7 +119,7 @@ export default class Dapp extends React.Component<Props, State> {
 
   private isNotMainnet(): boolean
   {
-    return this.state.network !== null && this.state.network.chainId !== 1;
+    return this.state.network !== null && this.state.network.chainId !== 80001;
   }
 
   private copyMerkleProofToClipboard(): void
@@ -150,7 +150,7 @@ export default class Dapp extends React.Component<Props, State> {
       <>
         {this.isNotMainnet() ?
           <div className="not-mainnet">
-            You are not connected to the main network.
+            You are not connected to the mumbai network. For rpc information see <a href="https://docs.polygon.technology/docs/develop/network-details/network/">here</a>
             <span className="small">Current network: <strong>{this.state.network?.name}</strong></span>
           </div>
           : null}
@@ -256,7 +256,7 @@ export default class Dapp extends React.Component<Props, State> {
 
   private generateEtherscanUrl(): string
   {
-    return `https://${this.state.network?.chainId === 1 || !this.state.network?.name ? 'www' : this.state.network.name}.mumbai.polygonscan.com/address/${CollectionConfig.contractAddress}`;
+    return `https://${this.state.network?.chainId === 1 || !this.state.network?.name ? 'https://' : this.state.network.name}mumbai.polygonscan.com/address/${CollectionConfig.contractAddress}`;
   }
 
   private generateOpenSeaUrl(): string

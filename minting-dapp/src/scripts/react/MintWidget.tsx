@@ -68,7 +68,7 @@ export default class MintWidget extends React.Component<Props, State> {
             </div>
 
             <div className="price">
-              <strong>Total price:</strong> {utils.formatEther(this.props.tokenPrice.mul(this.state.mintAmount))} ETH
+              <strong>Total price:</strong> {utils.formatEther(this.props.tokenPrice.mul(this.state.mintAmount))} MATIC
             </div>
 
             <div className="controls">
